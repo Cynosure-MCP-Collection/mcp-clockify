@@ -50,7 +50,7 @@ const server = new McpServer({
     version: '1.0.0',
     title: 'Clockify Time Tracking',
     description: 'Manage Clockify workspaces, projects, and time entries.',
-    icons: [{ src: 'https://raw.githubusercontent.com/andreasjhagen/OpenAgent-MCPs/main/mcp-clockify/icon.png', mimeType: 'image/png' }],
+    icons: [{ src: 'https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-clockify/icon.png', mimeType: 'image/png' }],
 });
 
 // ── Workspace tools ────────────────────────────────────────────────────────────
@@ -277,7 +277,7 @@ server.registerTool(
             workspaceId: z.string().describe('Workspace ID'),
             start: z.string().describe('Start time in ISO-8601 format (e.g., 2024-01-15T09:00:00Z)'),
             end: z.string().optional().describe('End time in ISO-8601 format. Omit to start a running timer.'),
-            description: z.string().optional().describe('Time entry description'),
+            description: z.string().optional().describe('Time entry description detailing what was done'),
             projectId: z.string().optional().describe('Project ID to assign the entry to'),
             taskId: z.string().optional().describe('Task ID (must belong to the specified project)'),
             tagIds: z.array(z.string()).optional().describe('List of tag IDs'),
