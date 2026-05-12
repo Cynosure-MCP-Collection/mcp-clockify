@@ -1,7 +1,7 @@
 {
   "name": "@cynosure-mcp/clockify",
   "mcpName": "io.github.andreasjhagen/clockify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "MCP server for Clockify time tracking — manage workspaces, projects, and time entries",
   "type": "module",
   "main": "dist/index.js",
