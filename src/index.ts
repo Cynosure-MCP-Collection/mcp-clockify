@@ -58,6 +58,7 @@ const server = new McpServer({
 server.registerTool(
     'list_workspaces',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List all Clockify workspaces accessible by the current user.',
     },
     async () => {
@@ -76,6 +77,7 @@ server.registerTool(
 server.registerTool(
     'get_current_user',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'Get info about the currently authenticated Clockify user, including their default workspace ID.',
     },
     async () => {
@@ -101,6 +103,7 @@ server.registerTool(
 server.registerTool(
     'list_projects',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List projects in a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -135,6 +138,7 @@ server.registerTool(
 server.registerTool(
     'get_project',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'Get details of a specific Clockify project.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -165,6 +169,7 @@ server.registerTool(
 server.registerTool(
     'create_project',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description: 'Create a new project in a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -201,6 +206,7 @@ server.registerTool(
 server.registerTool(
     'list_tasks',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List tasks on a Clockify project.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -238,6 +244,7 @@ server.registerTool(
 server.registerTool(
     'create_task',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description: 'Create a new task on a Clockify project.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -271,6 +278,7 @@ server.registerTool(
 server.registerTool(
     'create_time_entry',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: false, openWorldHint: true },
         description:
             'Create a new time entry in Clockify. Provide start/end for a completed entry, or just start to begin a running timer.',
         inputSchema: {
@@ -319,6 +327,7 @@ server.registerTool(
 server.registerTool(
     'stop_timer',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Stop the currently running timer for a user.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -351,6 +360,7 @@ server.registerTool(
 server.registerTool(
     'get_time_entries',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'Get time entries for a user in a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -395,6 +405,7 @@ server.registerTool(
 server.registerTool(
     'update_time_entry',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Update an existing time entry in Clockify.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -432,6 +443,7 @@ server.registerTool(
 server.registerTool(
     'delete_time_entry',
     {
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: true },
         description: 'Delete a time entry from a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -456,6 +468,7 @@ server.registerTool(
 server.registerTool(
     'list_tags',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List tags in a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
@@ -487,6 +500,7 @@ server.registerTool(
 server.registerTool(
     'list_clients',
     {
+        annotations: { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: true },
         description: 'List clients in a Clockify workspace.',
         inputSchema: {
             workspaceId: z.string().describe('Workspace ID'),
