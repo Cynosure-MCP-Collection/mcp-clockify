@@ -50,7 +50,7 @@ const server = new McpServer({
     version: '1.0.0',
     title: 'Clockify Time Tracking',
     description: 'Manage Clockify workspaces, projects, and time entries.',
-    icons: [{ src: 'https://raw.githubusercontent.com/andreasjhagen/Cynosure-MCPs/main/mcp-clockify/icon.png', mimeType: 'image/png' }],
+    icons: [{ src: 'https://unpkg.com/@cynosure-mcp/clockify@1.0.4/icon.png', mimeType: 'image/png' }],
 });
 
 // ── Workspace tools ────────────────────────────────────────────────────────────

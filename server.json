@@ -2,12 +2,18 @@
     "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
     "name": "io.github.andreasjhagen/clockify",
     "description": "MCP server for Clockify time tracking — manage workspaces, projects, and time entries",
-    "version": "1.0.1",
+    "version": "1.0.4",
+    "icons": [
+        {
+            "src": "https://unpkg.com/@cynosure-mcp/clockify@1.0.4/icon.png",
+            "mimeType": "image/png"
+        }
+    ],
     "packages": [
         {
             "registryType": "npm",
             "identifier": "@cynosure-mcp/clockify",
-            "version": "1.0.1",
+            "version": "1.0.4",
             "transport": {
                 "type": "stdio"
             },
