@@ -37,5 +37,13 @@
     "time-tracking",
     "project-management",
     "ai"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cynosure-MCP-Collection/mcp-clockify.git"
+  },
+  "homepage": "https://github.com/Cynosure-MCP-Collection/mcp-clockify#readme",
+  "bugs": {
+    "url": "https://github.com/Cynosure-MCP-Collection/mcp-clockify/issues"
+  }
 }
